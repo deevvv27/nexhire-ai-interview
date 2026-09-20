@@ -54,7 +54,7 @@ def send_resume_email(resume_file, candidate_name):
         return False
 
 st.set_page_config(
-    page_title="AI Interview Simulator",
+    page_title="NexHIRE - AI Interviewer",
     page_icon="🤖",
     layout="wide"
 )
@@ -194,7 +194,7 @@ margin-top:40px;
 
 # ---------- SIDEBAR ----------
 
-st.sidebar.title("🤖 AI Interview Dashboard")
+st.sidebar.title("🤖 Your Dashboard")
 
 st.sidebar.markdown("### Features")
 
@@ -230,7 +230,7 @@ st.sidebar.info("Interviews don’t reward luck. They reward preparation.")
 
 # ---------- HERO HEADER ----------
 
-st.markdown("<div class='title'>AI Interview Simulator</div>", unsafe_allow_html=True)
+st.markdown("<div class='title'>NexHIRE - AI Interviewer</div>", unsafe_allow_html=True)
 
 st.markdown(
 "<div class='subtitle'>Practice job interviews powered by Generative AI</div>",
@@ -266,7 +266,7 @@ with col2:
     placeholder="Software Engineer / Data Scientist / Product Manager"
     )
 
-    start = st.button("🚀 Start AI Interview")
+    start = st.button("🚀 Start your AI Interview")
 
     st.markdown("</div>", unsafe_allow_html=True)
 
@@ -278,7 +278,7 @@ if start and role.strip() != "":
     st.session_state.interview_started = True
     st.session_state.report_generated = False
 
-    st.toast("AI interviewer is preparing questions...", icon="🤖")
+    st.toast("NexHIRE is preparing questions...", icon="🤖")
 
     with st.spinner("Generating questions..."):
 
@@ -373,7 +373,6 @@ if st.session_state.report_generated:
 
 st.markdown("""
 <div class="footer">
-• Built by Divyanshu Singh, Afan Ali Khan,
-Diwakar Kumar, Krish Prasad & Navneet Singh Yadav
+• Built by Divyanshu Singh & Diwakar Kumar
 </div>
 """, unsafe_allow_html=True)
